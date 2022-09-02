@@ -1,0 +1,14 @@
+.piece {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid burlywood;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    height: 100px;
+  }
+}

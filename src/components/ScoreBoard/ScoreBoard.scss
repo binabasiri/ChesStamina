@@ -1,0 +1,58 @@
+.score-board {
+  height: 110px;
+  margin: 5px;
+  background-color: #eee5e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 100px;
+    margin: 5px;
+    width: 55px;
+    &--black {
+      background-color: black;
+      color: white;
+      transform: rotate(180deg);
+    }
+    &--white {
+      background-color: white;
+    }
+  }
+  &__score {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  &__reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 110px;
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #acf39d;
+  }
+  &__undo {
+    width: 55px;
+    border-radius: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #70877f;
+  }
+  &__undo-image {
+    width: 40px;
+    &--black {
+      transform: rotate(180deg);
+    }
+  }
+}
