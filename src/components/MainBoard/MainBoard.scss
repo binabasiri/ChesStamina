@@ -1,11 +1,18 @@
 .board {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  background-color: #f0f8ff;
 }
 .pieces-board {
   display: flex;
   justify-content: center;
+  height: 14vh;
 }
 .exercises {
   display: flex;
   justify-content: center;
+  height: 14vh;
 }
