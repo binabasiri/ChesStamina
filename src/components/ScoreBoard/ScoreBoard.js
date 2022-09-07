@@ -15,6 +15,7 @@ function ScoreBoard({
           className="score-board__undo-image score-board__undo-image--black"
           onClick={blackUndoHandler}
           src={undoIcon}
+          alt="black undo"
         />
       </div>
       <div className="score-board__card score-board__card--black">
@@ -31,7 +32,11 @@ function ScoreBoard({
         </span>
       </div>
       <div onClick={whiteUndoHandler} className="score-board__undo">
-        <img className="score-board__undo-image" src={undoIcon} />
+        <img
+          className="score-board__undo-image"
+          src={undoIcon}
+          alt="white undo"
+        />
       </div>
     </div>
   );
