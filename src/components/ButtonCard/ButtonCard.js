@@ -8,6 +8,7 @@ function ButtonCards({ icon, clickHandler, id, point }) {
         src={icon}
         onClick={() => clickHandler(point)}
         id={id}
+        alt={id}
       />
     </div>
   );
