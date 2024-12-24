@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainBoard.scss';
 import { useState } from 'react';
-import ButtonCards from '../ButtonCard/ButtonCard';
+import ButtonCards from '../../components/ButtonCard/ButtonCard';
 import blackRookIcon from '../../assets/chess pieces/brook.png';
 import whiteRookIcon from '../../assets/chess pieces/wrook.png';
 import whiteBishopIcon from '../../assets/chess pieces/wbishop.png';
@@ -21,7 +21,7 @@ import blackPushUpIcon from '../../assets/exercises/blackpushup.png';
 import blackJumpingJackIcon from '../../assets/exercises/blackjumpingjack.png';
 import blackSquatIcon from '../../assets/exercises/blacksquat.png';
 import undoIcon from '../../assets/undo.png';
-import ScoreBoard from '../ScoreBoard/ScoreBoard';
+import ScoreBoard from '../../components/ScoreBoard/ScoreBoard';
 
 function MainBoard() {
   const [whiteScore, setWhiteScore] = useState(0);

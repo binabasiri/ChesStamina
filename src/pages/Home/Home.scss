@@ -1,0 +1,453 @@
+// Variables
+$color-primary: #9333ea; // purple-600
+$color-primary-dark: #7e22ce; // purple-700
+$color-background: #111827; // gray-900
+$color-background-dark: #1f2937; // gray-800
+$color-background-card: #374151; // gray-700
+$color-text: #ffffff;
+$color-text-secondary: #d1d5db; // gray-300
+$color-icon: #c084fc; // purple-400
+
+// Mixins
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Base styles
+.chess-fit {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    $color-background,
+    $color-background-dark
+  );
+  color: $color-text;
+}
+
+.container {
+  @include container;
+}
+
+// Button styles
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-text;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-text;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-text-secondary;
+    }
+  }
+
+  &--outline {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid $color-text;
+    color: $color-text;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &__icon {
+    margin-left: 0.5rem;
+  }
+}
+
+// Hero section
+.hero {
+  @include container;
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 1024px) {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  &__media {
+    flex: 1;
+  }
+
+  &__video {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__video-overlay {
+    position: absolute;
+    inset: 0;
+    @include flex-center;
+  }
+}
+
+// Features section
+.features {
+  background-color: $color-background-dark;
+  padding: 5rem 0;
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.feature-card {
+  background-color: $color-background-card;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+
+  &__icon {
+    color: $color-icon;
+    margin-bottom: 1rem;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    color: $color-text-secondary;
+  }
+}
+
+// How to play section
+.how-to-play {
+  @include container;
+  padding: 5rem 1rem;
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__media {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__steps {
+    flex: 1;
+    padding-left: 0;
+
+    @media (min-width: 1024px) {
+      padding-left: 3rem;
+    }
+  }
+}
+
+.steps-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+// Footer section
+.footer {
+  background-color: $color-background-dark;
+  padding: 5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 2fr 2fr 3fr;
+    }
+  }
+
+  &__section {
+    &:last-child {
+      @media (min-width: 768px) {
+        grid-column: span 2;
+      }
+
+      @media (min-width: 1024px) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $color-text;
+  }
+
+  &__description {
+    color: $color-text-secondary;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $color-text;
+    @include flex-center;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__contributor-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__role {
+    font-size: 0.875rem;
+    color: $color-text-secondary;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $color-text;
+    transition: all 0.2s;
+
+    &::placeholder {
+      color: $color-text-secondary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &__textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  &__bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    color: $color-text-secondary;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__link {
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Modal
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  @include flex-center;
+  z-index: 50;
+
+  &__content {
+    background-color: $color-text;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 90vw;
+    width: 700px;
+
+    .button {
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100% !important;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.25rem;
+    }
+  }
+}
