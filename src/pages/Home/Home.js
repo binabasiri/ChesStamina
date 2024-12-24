@@ -166,17 +166,15 @@ export default function ChesstaminaLanding() {
                   </a>
                 </li>
                 <li className="footer__list-item">
-                  <a href="">
-                    <img
-                      src="/paya.jpg"
-                      alt="Mike Johnson"
-                      className="footer__avatar"
-                    />
-                    <div className="footer__contributor-info">
-                      <span className="footer__name">Paya Sadeghi</span>
-                      <span className="footer__role">Marketing Lead</span>
-                    </div>
-                  </a>
+                  <img
+                    src="/paya.jpg"
+                    alt="Mike Johnson"
+                    className="footer__avatar"
+                  />
+                  <div className="footer__contributor-info">
+                    <span className="footer__name">Paya Sadeghi</span>
+                    <span className="footer__role">Marketing Lead</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -204,23 +202,6 @@ export default function ChesstaminaLanding() {
                   Send Message
                 </button>
               </form>
-            </div>
-          </div>
-
-          <div className="footer__bottom">
-            <p className="footer__copyright">
-              © {new Date().getFullYear()} Chesstamina. All rights reserved.
-            </p>
-            <div className="footer__links">
-              <a href="#" className="footer__link">
-                Privacy Policy
-              </a>
-              <a href="#" className="footer__link">
-                Terms of Service
-              </a>
-              <a href="#" className="footer__link">
-                Contact
-              </a>
             </div>
           </div>
         </div>
