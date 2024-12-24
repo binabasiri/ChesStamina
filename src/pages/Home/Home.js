@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  ChevronRight,
-  CastleIcon as ChessKnight,
-  Dumbbell,
-  Brain,
-  Users,
-  Trophy,
-} from 'lucide-react';
+import { ChevronRight, Dumbbell, Brain, Users, Trophy } from 'lucide-react';
 import './Home.scss';
 import YouTube from 'react-youtube';
 
