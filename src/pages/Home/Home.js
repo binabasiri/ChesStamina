@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Dumbbell, Brain, Users, Trophy } from 'lucide-react';
+import {
+  ChevronRight,
+  CastleIcon as ChessKnight,
+  Dumbbell,
+  Brain,
+  Users,
+  Trophy,
+} from 'lucide-react';
 import './Home.scss';
 import YouTube from 'react-youtube';
 
@@ -17,6 +24,11 @@ export default function ChesstaminaLanding() {
       icon: <Dumbbell className="icon" />,
       title: 'Physical Fitness',
       description: 'Improve your physical health while playing',
+    },
+    {
+      icon: <ChessKnight className="icon" />,
+      title: 'Strategic thinking',
+      description: 'Challenge yourself and test your strategies',
     },
     {
       icon: <Users className="icon" />,
