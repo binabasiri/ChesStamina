@@ -147,7 +147,10 @@ export default function ChesstaminaLanding() {
                   </a>
                 </li>
                 <li className="footer__list-item">
-                  <a href="https://www.linkedin.com/in/bina-basiri/">
+                  <a
+                    className="footer__list-item"
+                    href="https://www.linkedin.com/in/bina-basiri/"
+                  >
                     <img
                       src="/bina.jpg"
                       alt="Jane Smith"
